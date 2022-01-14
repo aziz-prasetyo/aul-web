@@ -1,0 +1,178 @@
+:root {
+  --primary-font: 'Poppins', sans-serif;
+  --brand-font: 'Oleo Script', cursive;
+  --primary-color: #335384;
+  --primary-font-color: #3f3b3b;
+  --color-a: #506B95;
+  --color-b: #6D84A7;
+  --color-c: #8A9CB8;
+  --color-d: #A7B5CA;
+  --color-e: #C4CDDB;
+  --color-f: #E1E6ED;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: var(--primary-font-color);
+  background: var(--color-f);
+  font-family: var(--primary-font);
+}
+
+header {
+  position: sticky;
+  top: 0;
+}
+
+nav {
+  background: var(--primary-color);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 80px;
+}
+
+#brand {
+  font-family: var(--brand-font);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 2rem;
+  color: var(--color-f);
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  width: 38%;
+}
+
+nav ul li {
+  list-style: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 18px;
+  color: var(--color-f);
+  font-weight: 500;
+}
+
+nav ul li a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 5px;
+  border-radius: 5px;
+  background-color: #3FA2A2;
+  margin: 2px 0 -7px 0;
+  transition: width 0.2s ease;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: calc(100vh - 80px);
+}
+
+.group {
+  width: 70%;
+}
+
+.profile {
+  display: grid;
+  place-items: center;
+}
+
+.profile > div {
+  margin: 10px 0;
+}
+
+.group p {
+  text-align: justify;
+}
+
+img[alt="profile"] {
+  width: 240px;
+}
+
+#greetings {
+  font-size: 1.5rem;
+}
+
+#greetings span {
+  font-family: 'Fredoka One', cursive;
+  font-size: 3.5vw;
+  letter-spacing: 4px;
+  font-style: italic;
+  background: linear-gradient(90deg, #3FA2A2 0%, #335384 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-left: 12px;
+}
+
+#subs {
+  text-transform: capitalize;
+  letter-spacing: 8px;
+  color: var(--primary-color);
+}
+
+#download-resume {
+  font-family: var(--primary-font);
+  font-size: 16px;
+  text-transform: uppercase;
+  padding: 10px 40px;
+  background: linear-gradient(90deg, #335384 0%, #3FA2A2 100%);
+  color: var(--color-f);
+  border-radius: 40px;
+  border: none;
+  outline: none;
+  transition: 0.2s ease;
+}
+
+#download-resume:hover {
+  padding: 10px 50px;
+}
+
+#tittle {
+  color: var(--primary-color);
+}
+
+.contacts {
+  display: flex;
+}
+
+.contacts li {
+  list-style: none;
+}
+
+.contacts li a {
+  display: block;
+  width: 40px;
+  height: 40px;
+  font-size: 1.2rem;
+  text-align: center;
+  line-height: 40px;
+  color: var(--color-f);
+  background: linear-gradient(45deg, #3FA2A2 0%, #335384 100%);
+  border-radius: 8px;
+  margin: 0 10px;
+  text-decoration: none;
+  transition: margin 0.2s ease;
+}
+
+.contacts li a:hover {
+  margin-top: -10px;
+}
